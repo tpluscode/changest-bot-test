@@ -14,5 +14,5 @@ jobs:
       - name: Tag Package
         uses: Klemensas/action-autotag@1.2.3
         with:
-          package-root: package/foo
+          package_root: package/foo
           tag_prefix: "@foo/test/v"
