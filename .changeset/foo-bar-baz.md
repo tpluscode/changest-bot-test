@@ -1,5 +1,5 @@
----		
-"@foo/test": minor		
----		
+---
+"@foo/test": minor
+---
 
 Update package.json
