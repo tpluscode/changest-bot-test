@@ -28,7 +28,12 @@ jobs:
         uses: changesets/action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+  
+  tags:
+    name: Create tags
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
       - name: Tag Package
         uses: Klemensas/action-autotag@1.2.3
         with:
