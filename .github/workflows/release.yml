@@ -42,6 +42,7 @@ jobs:
           tag_prefix: "@foo/test/v"
       - name: Tag Bar
         uses: Klemensas/action-autotag@1.2.3
+        if: ${{ false }}
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"  
           package_root: packages/bar
