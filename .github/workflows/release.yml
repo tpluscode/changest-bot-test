@@ -35,22 +35,22 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Tag Foo
-        uses: Klemensas/action-autotag@1.2.3
+        uses: butlerlogic/action-autotag@stable
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"  
-          package_root: packages/foo
+          root: packages/foo
           tag_prefix: "@foo/test/v"
       - name: Tag Bar
-        uses: Klemensas/action-autotag@1.2.3
+        uses: butlerlogic/action-autotag@stable
         if: ${{ false }}
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"  
-          package_root: packages/bar
+          root: packages/bar
           tag_prefix: "@foo/bar/v"
       - name: Tag Baz
-        uses: Klemensas/action-autotag@1.2.3
+        uses: butlerlogic/action-autotag@stable
         if: ${{ false }}
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"  
-          package_root: packages/baz
+          root: packages/baz
           tag_prefix: "@foo/baz/v"
