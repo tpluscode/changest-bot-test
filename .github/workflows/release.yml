@@ -34,9 +34,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Tag Package
+      - name: Tag Foo
         uses: Klemensas/action-autotag@1.2.3
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"  
           package_root: packages/foo
           tag_prefix: "@foo/test/v"
+      - name: Tag Bar
+        uses: Klemensas/action-autotag@1.2.3
+        with:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"  
+          package_root: packages/bar
+          tag_prefix: "@foo/bar/v"
