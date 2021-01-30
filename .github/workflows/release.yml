@@ -32,25 +32,24 @@ jobs:
   tags:
     name: Create tags
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
     steps:
       - uses: actions/checkout@master
       - name: Tag Foo
         uses: butlerlogic/action-autotag@stable
         with:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"  
           root: packages/foo
           tag_prefix: "@foo/test/v"
       - name: Tag Bar
         uses: butlerlogic/action-autotag@stable
         if: ${{ false }}
         with:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"  
           root: packages/bar
           tag_prefix: "@foo/bar/v"
       - name: Tag Baz
         uses: butlerlogic/action-autotag@stable
         if: ${{ false }}
         with:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"  
           root: packages/baz
           tag_prefix: "@foo/baz/v"
