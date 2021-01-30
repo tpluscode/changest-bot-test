@@ -46,3 +46,9 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"  
           package_root: packages/bar
           tag_prefix: "@foo/bar/v"
+      - name: Tag Baz
+        uses: Klemensas/action-autotag@1.2.3
+        with:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"  
+          package_root: packages/baz
+          tag_prefix: "@foo/baz/v"
