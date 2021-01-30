@@ -1,5 +1,6 @@
 ---
 "@foo/bar": minor
+"@foo/baz": minor
 ---
 
-Created BAR
+Created BAR and BAZ
