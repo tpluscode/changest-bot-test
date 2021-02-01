@@ -37,17 +37,17 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Tag Foo
-        uses: tpluscode/action-autotag@master
+        uses: tpluscode/action-autotag@min-version-21
         with:
           root: packages/foo
           tag_prefix: "@foo/test/v"
       - name: Tag Bar
-        uses: tpluscode/action-autotag@master
+        uses: tpluscode/action-autotag@min-version-21
         with:
           root: packages/bar
           tag_prefix: "@foo/bar/v"
       - name: Tag Baz
-        uses: tpluscode/action-autotag@master
+        uses: tpluscode/action-autotag@min-version-21
         with:
           root: packages/baz
           tag_prefix: "@foo/baz/v"
