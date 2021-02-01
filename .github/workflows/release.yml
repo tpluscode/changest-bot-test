@@ -37,19 +37,17 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Tag Foo
-        uses: butlerlogic/action-autotag@stable
+        uses: tpluscode/action-autotag@master
         with:
           root: packages/foo
           tag_prefix: "@foo/test/v"
       - name: Tag Bar
-        uses: butlerlogic/action-autotag@stable
-        if: ${{ false }}
+        uses: tpluscode/action-autotag@master
         with:
           root: packages/bar
           tag_prefix: "@foo/bar/v"
       - name: Tag Baz
-        uses: butlerlogic/action-autotag@stable
-        if: ${{ false }}
+        uses: tpluscode/action-autotag@master
         with:
           root: packages/baz
           tag_prefix: "@foo/baz/v"
